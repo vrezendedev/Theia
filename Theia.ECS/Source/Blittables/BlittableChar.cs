@@ -36,13 +36,13 @@ public partial struct BlittableChar : IEquatable<BlittableChar>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Set(char value) => _value = value;
 
-    public bool Equals(BlittableChar other) => _value == other._value;
+    public readonly bool Equals(BlittableChar other) => _value == other._value;
 
-    public override bool Equals(object? obj) => obj is BlittableChar && Equals((BlittableChar)obj);
+    public override readonly bool Equals(object? obj) => obj is BlittableChar c && Equals(c);
 
-    public override int GetHashCode() => _value.GetHashCode();
+    public override readonly int GetHashCode() => _value.GetHashCode();
 
-    public override string ToString() => $"{nameof(BlittableChar)}(Value: {_value})";
+    public override readonly string ToString() => $"{nameof(BlittableChar)}(Value: {_value})";
 
     public static bool operator ==(BlittableChar left, BlittableChar right) => left.Equals(right);
 

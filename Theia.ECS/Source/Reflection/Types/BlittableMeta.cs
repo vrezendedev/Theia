@@ -48,8 +48,9 @@ internal static class BlittableMeta
         s_cachedBlittables[typeof(decimal)] = false;
         s_cachedBlittables[typeof(DateTime)] = false;
         s_cachedBlittables[typeof(TimeSpan)] = true;
-        s_cachedBlittables[typeof(BlittableChar)] = true;
         s_cachedBlittables[typeof(BlittableBoolean)] = true;
+        s_cachedBlittables[typeof(BlittableChar)] = true;
+        s_cachedBlittables[typeof(BlittableRectangle)] = true;
         s_cachedBlittables[typeof(Entity)] = true;
         s_cachedBlittables[typeof(EntityMeta)] = true;
     }
