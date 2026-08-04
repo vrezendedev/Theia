@@ -23,7 +23,7 @@ public abstract class Query
 
     internal Query(in World world) => _world = world;
 
-    public ref readonly World GetWorld() => ref _world;
+    public World GetWorld() => _world;
 }
 
 /// <summary>
